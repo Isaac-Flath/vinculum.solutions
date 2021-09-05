@@ -1,0 +1,266 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************************************** Utility Components ***************************************/
+:root {
+  font-size: 62.5%;
+
+  /************ Custom Properties ***********/
+/* Primary Color*/
+--primary-color: #030303;
+--primary-color-m-light: #EAEAEA;
+--primary-color-m-dark: #030303;
+
+/*Secondary Color*/
+--secondary-color: #FF2E63;
+--secondary-color-m-light: #08D9D6;
+--secondary-color-m-dark: #FF2E63;
+
+}
+
+body {
+  font-family: "national-2-condensed-web-regular";
+  line-height: 1.8;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;;
+}
+
+  /*Header*/
+  .header {
+    background: rgba(255,255,255,0.10);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.18);
+    position: fixed;
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.8rem;
+    z-index: 1;
+  }
+
+  .header a {
+    text-decoration: none;
+    color: var(--primary-color-m-light);
+    font-size: calc(0.85rem + 1vw);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .menu-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-items li a {
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+  }
+
+/* Hover effect main nav buttons */
+  .menu-items li a:link::before,
+  .menu-items li a:visited::before,
+  .menu-items li a:link::after,
+  .menu-items li a:visited::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 95%;
+  height: 0.3rem;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .menu-items li a:link::before,
+  .menu-items li a:visited::before {
+    bottom: 0;
+    transform-origin: left;
+  }
+
+  .menu-items li a:link::after,
+  .menu-items li a:visited::after {
+    bottom: 0;
+    transform-origin: left;
+  }
+
+  .menu-items li a:hover::before,
+  .menu-items li a:active::before,
+  .menu-items li a:hover::after,
+  .menu-items li a:active::after {
+    transform: scaleX(1);
+  }
+
+  span.button {
+    color: var(--secondary-color);
+  }
+
+
+
+  #posts {
+    height: 75vh;
+    padding-top: 10vh;
+  }
+
+  #about {
+    height: 60vh;
+    padding-top: 10vh;
+    font-size: 3vh;
+    background-color:var(--primary-color-m-light);
+    color: var(--primary-color-m-dark);
+  }
+
+  #contact {
+    height: 75vh;
+    background-color: var(--primary-color-m-dark);
+    color: var(--primary-color-m-light);
+    font-size: 3vh;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color:var(--secondary-color-m-dark);
+    color:var(--primary-color-m-dark);
+    font-weight: 900;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: x-large;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: var(--secondary-color-m-light);
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color:var(--primary-color-m-dark);
+    padding: 20px;
+  }
+
+
+
+  #about p {
+    color: var(--primary-color-m-dark)
+
+  }
+  #abouticon {
+    font-size: 15rem;
+    padding-bottom: 5rem;
+    color: var(--primary-color-m-dark)
+  }
+
+  #abouticondiv {text-align: center;}
+
+  #abouttext {text-align: center;}
+  a {
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color-m-light);
+    font-size: 3vh;
+    text-decoration: none;
+  }
+
+  .bigblogdiv {padding-left: 5vw;}
+  
+  strong {color: var(--secondary-color-m-light);}
+  
+  p {color: var(--primary-color-m-light);}
+
+  .postlink {
+    color: var(--secondary-color-m-light);
+    font-weight: 900;
+  }
+  
+  /* 0000FF */
+  .postdescription {
+    font-size: 2vh;
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+  }
+  .postdate {
+    font-style: italic;
+    font-size: 1.5vh;
+    padding-bottom: 3vh;
+    font-family: 'Merriweather', serif;
+
+  }
+
+.posttags {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5vh;
+}
+
+.basiclist {
+  color: var(--primary-color-m-dark);
+  margin-left: 5rem;
+  display: list-item;
+  list-style: none;
+}
+
+.basiclist li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#hero {
+  background-image: url("images/data.jpg");
+  background-size: cover;
+  object-position: center;
+  height: 100vh;
+  padding-top: 10vh;
+  font-size: 3vh;
+}
+
+#herotitle {
+  font-size: calc(4rem + 5vw);
+  text-align: right;
+  margin-top: 20vh;
+  /* margin-right: 1vw; */
+  color: var(--primary-color-m-light);
+  font-family: serif;
+  border-bottom: 5px solid #EAEAEA;
+  border-top: 5px solid #EAEAEA;
+
+}
+
+#contactemaildiv {
+  display: flex;
+  align-items: center;
+}
+/* #emailicon {
+  justify-content:;
+} */
