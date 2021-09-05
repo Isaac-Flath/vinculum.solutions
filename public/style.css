@@ -118,18 +118,11 @@ body {
   }
 
   #about {
-    height: 60vh;
+    height: 80vh;
     padding-top: 10vh;
     font-size: 3vh;
     background-color:var(--primary-color-m-light);
     color: var(--primary-color-m-dark);
-  }
-
-  #contact {
-    height: 75vh;
-    background-color: var(--primary-color-m-dark);
-    color: var(--primary-color-m-light);
-    font-size: 3vh;
   }
 
   input[type=text], select, textarea {
@@ -259,8 +252,16 @@ body {
 
 #contactemaildiv {
   display: flex;
+  background-color: var(--primary-color-m-dark);
+
+  color: var(--primary-color-m-light);
+  font-size: calc(1rem + 1vw);
   align-items: center;
+  height: 15vh;
+  justify-content: center;
 }
+
+
 /* #emailicon {
-  justify-content:;
+  color: var(--primary-color-m-light);
 } */
