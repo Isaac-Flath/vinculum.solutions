@@ -236,7 +236,7 @@ body {
 #projectcards {
   background-color: var(--primary-color-m-dark);
   padding-top: 20vh;
-  height: 125vh;
+  height: 150vh;
 }
 
 * {
